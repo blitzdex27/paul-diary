@@ -22,6 +22,6 @@ app.use('/data', dataRoute)
 app.use('/register', registerRoute)
 
 const port = process.env.PORT || 5000
-app.listen(5000, () => {
+app.listen(port, () => {
     process.stdout.write(`Server started at port ${port}`)
 })
