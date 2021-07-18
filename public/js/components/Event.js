@@ -1,9 +1,7 @@
 
 
 function Event (props) {
-    const {subject, content} = props
-
-    const datetime = new Date()
+    const {date, time, subject, content} = props
 
     const event = document.createElement("li")
     event.setAttribute('class', 'event-list-item')
@@ -12,12 +10,12 @@ function Event (props) {
     eventInfoList.setAttribute('class', 'event-info-list')
 
     const eventDate = document.createElement('li')
-    eventDate.setAttribute('class', 'event-info-data')
-    eventDate.innerText = datetime.toLocaleDateString()
+    eventDate.setAttribute('class', 'event-info-date')
+    eventDate.innerText = date
 
     const eventTime = document.createElement('li')
     eventTime.setAttribute('class', 'event-info-time')
-    eventTime.innerText = datetime.toLocaleTimeString()
+    eventTime.innerText = time
 
     const eventSubject = document.createElement('li')
     eventSubject.setAttribute('class', 'event-info-subject')
